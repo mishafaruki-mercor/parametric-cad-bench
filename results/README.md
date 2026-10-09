@@ -23,7 +23,7 @@ Each `kimi-k3/<task>/` folder has one `rolloutN/` folder per Kimi K3 run (the Ha
 | Agent | `oracle` (runs `solution/solve.sh`) | mini-swe-agent 2.4.6, reasoning effort `max`, CAD Bench v3 leaderboard multimodal config |
 | Model | n/a | `moonshotai/kimi-k3` through the Vercel AI Gateway |
 | Attempts | 1 per task | Lobed rotor 1, hand cannon 3, tray bracket 3 rollouts (see each `kimi-k3/<task>/README.md`) |
-| Command | `harbor run -p . -a oracle` | see each job's `config.json` |
+| Command | `harbor run -p tasks -a oracle` | see each job's `config.json` |
 
 The Kimi K3 runs were made on the same tasks under earlier working names: `lobed-rotor-image`, `hand-cannon-v2-image` and `tray-bracket-image-v3`. Those use the same instruction, drawing, verifier, spec and reference as the tasks in this repo. The only differences were the name and a `--platform=linux/amd64` line in the Dockerfiles, which was needed to run on a Mac.
 
