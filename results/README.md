@@ -1,6 +1,6 @@
 # Results
 
-Run outputs for the three tasks in this dataset, laid out exactly as Harbor writes them (`jobs/<job>/<trial>/…`). Every file here was produced by Harbor or the official CAD Bench verifier during a run. No file was added or edited by hand.
+Run outputs for the three tasks in this dataset, as Harbor writes them (`jobs/<job>/<trial>/…`), grouped into one folder per rollout, with each trial folder renamed from Harbor's random ID to a readable name (see **Trial level** below). Every file inside a run folder was produced by Harbor or the official CAD Bench verifier during a run and hasn't been edited. The READMEs and `comparison.png` files were added for review.
 
 ```
 results/
@@ -38,7 +38,7 @@ The Kimi K3 runs were made on the same tasks under earlier working names: `lobed
 | `job.log` | Harbor | Job-level log |
 | `lock.json` | Harbor | Resolved task digests and versions for the job |
 
-**Trial level** (`<job>/<task>__<id>/`, one per attempt)
+**Trial level** (one folder per attempt). Harbor names these `<task>__<random id>`; here they're renamed `kimi-k3/<task>/rolloutN/<task>-rolloutN/` and `oracle/<task>/`. Harbor's files inside still use the original ID, which each task README lists.
 
 | File | Written by | Contents |
 |---|---|---|

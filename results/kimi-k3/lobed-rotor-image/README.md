@@ -30,8 +30,8 @@ A second rollout was started (job `kimi-k3-rollout2`) but stopped by hand partwa
 
 ## Folders
 
-| Folder | Harbor job | Trial |
-|---|---|---|
-| `rollout1/` | `kimi-k3-lobed-rotor-official` | `lobed-rotor-image__KB6wjkJ` |
+| Folder | Trial folder | Harbor job | Original Harbor trial ID |
+|---|---|---|---|
+| `rollout1/` | `lobed-rotor-image-rollout1/` | `kimi-k3-lobed-rotor-official` | `lobed-rotor-image__KB6wjkJ` |
 
 See `../../README.md` for what each file is.

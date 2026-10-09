@@ -42,13 +42,13 @@ The hint is small, though. The base is about 6 px tall at drawing scale, the iso
 
 ## Folders
 
-| Folder | Harbor job | Trial |
-|---|---|---|
-| `rollout1/` | `tray-bracket-v3` run (earlier working name; same task) | `tray-bracket-image-v3__3t3What` |
-| `rollout2/` | `kimi-k3-rollout2` | `tray-bracket-image__KBAsL7J` |
-| `rollout3/` | `kimi-k3-rollout3-tray` | `tray-bracket-image__phtLVMF` |
+| Folder | Trial folder | Harbor job | Original Harbor trial ID |
+|---|---|---|---|
+| `rollout1/` | `tray-bracket-image-rollout1/` | `tray-bracket-v3` run (earlier working name; same task) | `tray-bracket-image-v3__3t3What` |
+| `rollout2/` | `tray-bracket-image-rollout2/` | `kimi-k3-rollout2` | `tray-bracket-image__KBAsL7J` |
+| `rollout3/` | `tray-bracket-image-rollout3/` | `kimi-k3-rollout3-tray` | `tray-bracket-image__phtLVMF` |
 
-Each rollout folder has the job files and the trial folder:
+Each rollout folder has the job files (`config.json`, `result.json`, `job.log`, `lock.json`) and one trial folder, named `<task>-rolloutN/`. Harbor gives trials random IDs; they were renamed for readability, and Harbor's own files inside (logs, `config.json`, `result.json`) still use the original ID listed above. The trial folder has:
 - the agent logs and trajectories (`agent/`)
 - Kimi's `answer.py` and `answer.FCStd` (`artifacts/app/`)
 - the grader output (`verifier/`)

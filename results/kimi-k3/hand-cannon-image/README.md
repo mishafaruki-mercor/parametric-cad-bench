@@ -20,13 +20,13 @@ All three rollouts used the same task, drawing, verifier and agent settings: min
 
 ## Folders
 
-| Folder | Harbor job | Trial |
-|---|---|---|
-| `rollout1/` | `hand-cannon-v2` run (earlier working name; same task) | `hand-cannon-v2-image__QnMqYga` |
-| `rollout2/` | `kimi-k3-rollout2` | `hand-cannon-image__ppZ4SFY` |
-| `rollout3/` | `kimi-k3-rollout3-hand-cannon` | `hand-cannon-image__qvzmRa7` |
+| Folder | Trial folder | Harbor job | Original Harbor trial ID |
+|---|---|---|---|
+| `rollout1/` | `hand-cannon-image-rollout1/` | `hand-cannon-v2` run (earlier working name; same task) | `hand-cannon-v2-image__QnMqYga` |
+| `rollout2/` | `hand-cannon-image-rollout2/` | `kimi-k3-rollout2` | `hand-cannon-image__ppZ4SFY` |
+| `rollout3/` | `hand-cannon-image-rollout3/` | `kimi-k3-rollout3-hand-cannon` | `hand-cannon-image__qvzmRa7` |
 
-Each rollout folder has the job files (`config.json`, `result.json`, `job.log`, `lock.json`) and the trial folder:
+Each rollout folder has the job files (`config.json`, `result.json`, `job.log`, `lock.json`) and one trial folder, named `<task>-rolloutN/`. Harbor gives trials random IDs; they were renamed for readability, and Harbor's own files inside (logs, `config.json`, `result.json`) still use the original ID listed above. The trial folder has:
 - the agent logs and trajectories (`agent/`)
 - Kimi's `answer.py` and `answer.FCStd` (`artifacts/app/`)
 - the grader output (`verifier/reward.json`, `reward_details.json`, `answer.png`)
